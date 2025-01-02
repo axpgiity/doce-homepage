@@ -1,0 +1,225 @@
+/* General Reset */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0b0421, #1f2661, #1a0e3b ); /* Gradient background */
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box; /* Ensures proper sizing */
+  box-shadow: none !important; /* Ensure no shadow */
+  border: none !important;
+}
+
+body {
+  padding-top: 60px;
+  padding-bottom: 1000px; /* Adjust this value based on the navbar's height */
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/* App Container */
+.app {
+  max-width: 1200px;
+  padding: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+
+/* Navbar Content */
+.navbar-links, .navbar-brand {
+  max-width: 100%; /* Ensure child elements respect the parent width */
+  overflow: hidden; /* Prevent overflow from long content */
+  text-overflow: ellipsis; /* Adds "..." if the content overflows */
+  white-space: nowrap; /* Prevent line breaking */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0px;
+  height: 11%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px; /* Adjusted padding */
+  z-index: 1000; /* Ensures navbar stays on top */
+  box-sizing: border-box; /* Prevents width/padding issues */
+  overflow: hidden; /* Prevents overflow from child elements */
+  border-bottom: none; /* Ensure no border */
+  background: transparent !important ; /* Optional if navbar needs full transparency */
+  box-shadow: none !important; /* Ensure no shadow */
+  border: none !important;
+  background: linear-gradient(135deg, #0b0421, #1f2661, #1a0e3b); /* Match body gradient */  
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the logo and the links */
+}
+
+.navbar-links {
+  padding-top: 20px;
+  display: flex;
+  gap: 15px; /* Adjusted spacing between links */
+  margin-left: auto; /* Push the links to the far right */
+}
+
+.navbar-logo {
+  padding-top: 5px;
+  width: 100px; /* Adjust logo size */
+  object-fit: contain; /* Ensure proper scaling */
+}
+
+
+.navbar-brand {
+  padding-top: 20px;
+  font-size: 35px; /* Increased font size */
+  font-weight: bold;
+  background: linear-gradient(90deg, #7928ca, #ff0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px; /* Increased spacing between links */
+}
+
+.navbar-link {
+  color: #8b949e;
+  text-decoration: none;
+  font-size: 15.5px; /* Adjusted font size */
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: white;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px; /* Padding for spacing */
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 70px; /* Increased font size */
+  margin-bottom: 20px;
+  margin-top: -20px; /* Adjust the top margin to move the text upwards */
+  line-height: 1.2; /* Adjust line-height for better spacing */
+}
+
+
+.description {
+  font-size: 20px; /* Adjusted font size */
+  margin-bottom: 20px;
+  color: lightgray;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px; /* Adjusted spacing */
+  margin-bottom: 25px;
+}
+
+.form-button {
+  flex: 1;
+  background: #21262d;
+  color: gray;
+  padding: 15px; /* Adjusted padding */
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-button.active {
+  background: #7928ca;
+  color: white;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-input {
+  padding: 15px; /* Adjusted padding */
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.form-submit {
+  background: #7928ca;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px; /* Adjusted padding */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-submit:disabled {
+  background: #7928ca50;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8%; /* Reduced height */
+  background: #21293500;  
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center;
+  font-size: 13px; /* Text size */
+  color: rgba(152, 149, 149, 0.349);
+  padding: 0; /* Remove padding to rely on flexbox */
+  box-sizing: border-box;
+  border-top: 1px solid rgba(184, 180, 180, 0.077); /* Border for a sleek look */
+}
